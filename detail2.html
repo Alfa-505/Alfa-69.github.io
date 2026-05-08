@@ -1,0 +1,309 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;800;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary": "#5f5e5e",
+                    "background": "#f9f9f9",
+                    "on-primary": "#ffffff",
+                    "surface-container": "#eeeeee",
+                    "outline": "#837560",
+                    "tertiary": "#5e5e5e",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "tertiary-container": "#c5c4c4",
+                    "on-secondary-fixed-variant": "#474746",
+                    "surface-container-high": "#e8e8e8",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "surface-bright": "#f9f9f9",
+                    "surface-variant": "#e2e2e2",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "primary": "#7c5800",
+                    "on-background": "#1a1c1c",
+                    "primary-fixed-dim": "#ffbb1e",
+                    "on-primary-fixed": "#271900",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#7c5800",
+                    "surface-dim": "#dadada",
+                    "surface": "#f9f9f9",
+                    "secondary-fixed": "#e4e2e1",
+                    "primary-container": "#fdb813",
+                    "on-primary-container": "#6b4b00",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface-variant": "#504533",
+                    "secondary-container": "#e4e2e1",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-container": "#515151",
+                    "error-container": "#ffdad6",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f1f1f1",
+                    "outline-variant": "#d5c4ac",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-surface": "#1a1c1c",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "primary-fixed": "#ffdea7",
+                    "surface-container-low": "#f3f3f3",
+                    "on-secondary-container": "#656464",
+                    "inverse-primary": "#ffbb1e",
+                    "surface-container-highest": "#e2e2e2",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "inverse-surface": "#2f3131",
+                    "tertiary-fixed": "#e4e2e2"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "margin": "32px",
+                    "gutter": "24px",
+                    "container-max": "1280px",
+                    "base": "8px",
+                    "stack-md": "16px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "section-padding": "80px"
+            },
+            "fontFamily": {
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-xl": ["Space Grotesk"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "label-sm": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "headline-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hard-shadow {
+            box-shadow: 4px 4px 0px 0px rgba(0,0,0,1);
+        }
+        .hard-shadow-hover:hover {
+            box-shadow: 6px 6px 0px 0px rgba(0,0,0,1);
+            transform: translate(-2px, -2px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}[type='text'],input:where(:not([type])),[type='email'],[type='url'],[type='password'],[type='number'],[type='date'],[type='datetime-local'],[type='month'],[type='search'],[type='tel'],[type='time'],[type='week'],[multiple],textarea,select{-webkit-appearance:none;appearance:none;background-color:#fff;border-color:#6b7280;border-width:1px;border-radius:0px;padding-top:0.5rem;padding-right:0.75rem;padding-bottom:0.5rem;padding-left:0.75rem;font-size:1rem;line-height:1.5rem;--tw-shadow:0 0 #0000;}[type='text']:focus, input:where(:not([type])):focus, [type='email']:focus, [type='url']:focus, [type='password']:focus, [type='number']:focus, [type='date']:focus, [type='datetime-local']:focus, [type='month']:focus, [type='search']:focus, [type='tel']:focus, [type='time']:focus, [type='week']:focus, [multiple]:focus, textarea:focus, select:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);border-color:#2563eb}input::placeholder,textarea::placeholder{color:#6b7280;opacity:1}::-webkit-datetime-edit-fields-wrapper{padding:0}::-webkit-date-and-time-value{min-height:1.5em;text-align:inherit}::-webkit-datetime-edit{display:inline-flex}::-webkit-datetime-edit,::-webkit-datetime-edit-year-field,::-webkit-datetime-edit-month-field,::-webkit-datetime-edit-day-field,::-webkit-datetime-edit-hour-field,::-webkit-datetime-edit-minute-field,::-webkit-datetime-edit-second-field,::-webkit-datetime-edit-millisecond-field,::-webkit-datetime-edit-meridiem-field{padding-top:0;padding-bottom:0}select{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e");background-position:right 0.5rem center;background-repeat:no-repeat;background-size:1.5em 1.5em;padding-right:2.5rem;print-color-adjust:exact}[multiple],[size]:where(select:not([size="1"])){background-image:initial;background-position:initial;background-repeat:unset;background-size:initial;padding-right:0.75rem;print-color-adjust:unset}[type='checkbox'],[type='radio']{-webkit-appearance:none;appearance:none;padding:0;print-color-adjust:exact;display:inline-block;vertical-align:middle;background-origin:border-box;-webkit-user-select:none;user-select:none;flex-shrink:0;height:1rem;width:1rem;color:#2563eb;background-color:#fff;border-color:#6b7280;border-width:1px;--tw-shadow:0 0 #0000}[type='checkbox']{border-radius:0px}[type='radio']{border-radius:100%}[type='checkbox']:focus,[type='radio']:focus{outline:2px solid transparent;outline-offset:2px;--tw-ring-inset:var(--tw-empty,/*!*/ /*!*/);--tw-ring-offset-width:2px;--tw-ring-offset-color:#fff;--tw-ring-color:#2563eb;--tw-ring-offset-shadow:var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);--tw-ring-shadow:var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);box-shadow:var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow)}[type='checkbox']:checked,[type='radio']:checked{border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat}[type='checkbox']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M12.207 4.793a1 1 0 010 1.414l-5 5a1 1 0 01-1.414 0l-2-2a1 1 0 011.414-1.414L6.5 9.086l4.293-4.293a1 1 0 011.414 0z'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='checkbox']:checked{-webkit-appearance:auto;appearance:auto}}[type='radio']:checked{background-image:url("data:image/svg+xml,%3csvg viewBox='0 0 16 16' fill='white' xmlns='http://www.w3.org/2000/svg'%3e%3ccircle cx='8' cy='8' r='3'/%3e%3c/svg%3e");}@media (forced-colors: active) {[type='radio']:checked{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:checked:hover,[type='checkbox']:checked:focus,[type='radio']:checked:hover,[type='radio']:checked:focus{border-color:transparent;background-color:currentColor}[type='checkbox']:indeterminate{background-image:url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 16'%3e%3cpath stroke='white' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M4 8h8'/%3e%3c/svg%3e");border-color:transparent;background-color:currentColor;background-size:100% 100%;background-position:center;background-repeat:no-repeat;}@media (forced-colors: active) {[type='checkbox']:indeterminate{-webkit-appearance:auto;appearance:auto}}[type='checkbox']:indeterminate:hover,[type='checkbox']:indeterminate:focus{border-color:transparent;background-color:currentColor}[type='file']{background:unset;border-color:inherit;border-width:0;border-radius:0;padding:0;font-size:unset;line-height:inherit}[type='file']:focus{outline:1px solid ButtonText;outline:1px auto -webkit-focus-ring-color}.absolute{position:absolute}.relative{position:relative}.sticky{position:sticky}.bottom-0{bottom:0px}.left-4{left:1rem}.top-0{top:0px}.top-4{top:1rem}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-20{margin-bottom:5rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}.mt-16{margin-top:4rem}.mt-20{margin-top:5rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.aspect-video{aspect-ratio:16 / 9}.h-full{height:100%}.w-full{width:100%}.max-w-\[1280px\]{max-width:1280px}.max-w-full{max-width:100%}.border-collapse{border-collapse:collapse}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-10{gap:2.5rem}.gap-2{gap:0.5rem}.gap-3{gap:0.75rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.gap-px{gap:1px}.space-y-3 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.75rem * var(--tw-space-y-reverse))}.space-y-4 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-6 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.space-y-8 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(2rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(2rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-neutral-200 > :not([hidden]) ~ :not([hidden]){--tw-divide-opacity:1;border-color:rgb(229 229 229 / var(--tw-divide-opacity, 1))}.overflow-hidden{overflow:hidden}.overflow-x-auto{overflow-x:auto}.border-2{border-width:2px}.border-4{border-width:4px}.border-b{border-bottom-width:1px}.border-b-2{border-bottom-width:2px}.border-b-4{border-bottom-width:4px}.border-l-8{border-left-width:8px}.border-t{border-top-width:1px}.border-t-8{border-top-width:8px}.border-\[\#FDB813\]{--tw-border-opacity:1;border-color:rgb(253 184 19 / var(--tw-border-opacity, 1))}.border-neutral-200{--tw-border-opacity:1;border-color:rgb(229 229 229 / var(--tw-border-opacity, 1))}.border-neutral-700{--tw-border-opacity:1;border-color:rgb(64 64 64 / var(--tw-border-opacity, 1))}.border-neutral-900{--tw-border-opacity:1;border-color:rgb(23 23 23 / var(--tw-border-opacity, 1))}.border-primary-container{--tw-border-opacity:1;border-color:rgb(253 184 19 / var(--tw-border-opacity, 1))}.bg-\[\#FDB813\]{--tw-bg-opacity:1;background-color:rgb(253 184 19 / var(--tw-bg-opacity, 1))}.bg-background{--tw-bg-opacity:1;background-color:rgb(249 249 249 / var(--tw-bg-opacity, 1))}.bg-neutral-50{--tw-bg-opacity:1;background-color:rgb(250 250 250 / var(--tw-bg-opacity, 1))}.bg-neutral-900{--tw-bg-opacity:1;background-color:rgb(23 23 23 / var(--tw-bg-opacity, 1))}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(238 238 238 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(243 243 243 / var(--tw-bg-opacity, 1))}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.object-cover{object-fit:cover}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-12{padding-left:3rem;padding-right:3rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-10{padding-top:2.5rem;padding-bottom:2.5rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-5{padding-top:1.25rem;padding-bottom:1.25rem}.pb-2{padding-bottom:0.5rem}.pl-6{padding-left:1.5rem}.pt-4{padding-top:1rem}.text-left{text-align:left}.text-center{text-align:center}.font-\[\'Space_Grotesk\'\]{font-family:'Space Grotesk'}.font-body-lg{font-family:Inter}.font-body-md{font-family:Inter}.font-headline-lg{font-family:Space Grotesk}.font-headline-md{font-family:Space Grotesk}.font-headline-xl{font-family:Space Grotesk}.font-label-bold{font-family:Inter}.font-label-sm{font-family:Inter}.font-mono{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-body-lg{font-size:18px;line-height:1.6;font-weight:400}.text-headline-lg{font-size:32px;line-height:1.2;font-weight:700}.text-headline-md{font-size:24px;line-height:1.3;font-weight:600}.text-headline-xl{font-size:48px;line-height:1.1;letter-spacing:-0.02em;font-weight:700}.text-label-bold{font-size:14px;line-height:1;font-weight:700}.text-label-sm{font-size:12px;line-height:1;font-weight:500}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-medium{font-weight:500}.uppercase{text-transform:uppercase}.leading-snug{line-height:1.375}.tracking-tight{letter-spacing:-0.025em}.tracking-tighter{letter-spacing:-0.05em}.tracking-widest{letter-spacing:0.1em}.text-\[\#FDB813\]{--tw-text-opacity:1;color:rgb(253 184 19 / var(--tw-text-opacity, 1))}.text-black{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.text-neutral-400{--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1))}.text-neutral-600{--tw-text-opacity:1;color:rgb(82 82 82 / var(--tw-text-opacity, 1))}.text-neutral-900{--tw-text-opacity:1;color:rgb(23 23 23 / var(--tw-text-opacity, 1))}.text-on-background{--tw-text-opacity:1;color:rgb(26 28 28 / var(--tw-text-opacity, 1))}.text-primary{--tw-text-opacity:1;color:rgb(124 88 0 / var(--tw-text-opacity, 1))}.text-secondary{--tw-text-opacity:1;color:rgb(95 94 94 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.shadow-\[4px_4px_0px_0px_rgba\(0\2c 0\2c 0\2c 1\)\]{--tw-shadow:4px 4px 0px 0px rgba(0,0,0,1);--tw-shadow-colored:4px 4px 0px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-150{transition-duration:150ms}.hover\:bg-\[\#FDB813\]:hover{--tw-bg-opacity:1;background-color:rgb(253 184 19 / var(--tw-bg-opacity, 1))}.hover\:text-\[\#FDB813\]:hover{--tw-text-opacity:1;color:rgb(253 184 19 / var(--tw-text-opacity, 1))}.hover\:text-black:hover{--tw-text-opacity:1;color:rgb(0 0 0 / var(--tw-text-opacity, 1))}.hover\:text-primary:hover{--tw-text-opacity:1;color:rgb(124 88 0 / var(--tw-text-opacity, 1))}.active\:translate-y-1:active{--tw-translate-y:0.25rem;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.active\:shadow-none:active{--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.dark\:border-neutral-800:is(.dark *){--tw-border-opacity:1;border-color:rgb(38 38 38 / var(--tw-border-opacity, 1))}.dark\:bg-neutral-950:is(.dark *){--tw-bg-opacity:1;background-color:rgb(10 10 10 / var(--tw-bg-opacity, 1))}.dark\:text-neutral-400:is(.dark *){--tw-text-opacity:1;color:rgb(163 163 163 / var(--tw-text-opacity, 1))}.dark\:text-white:is(.dark *){--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.dark\:shadow-\[4px_4px_0px_0px_rgba\(255\2c 255\2c 255\2c 0\.1\)\]:is(.dark *){--tw-shadow:4px 4px 0px 0px rgba(255,255,255,0.1);--tw-shadow-colored:4px 4px 0px 0px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:flex{display:flex}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}}</style></head>
+<body class="bg-background text-on-background font-body-md" data-mode="connect">
+<!-- TopAppBar -->
+<header class="bg-white dark:bg-neutral-950 border-b-4 border-neutral-900 dark:border-neutral-800 shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] dark:shadow-[4px_4px_0px_0px_rgba(255,255,255,0.1)] docked full-width top-0 z-50 sticky">
+<div class="flex justify-between items-center w-full px-6 py-4 max-w-full">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-[#FDB813]" data-icon="construction">construction</span>
+<h1 class="text-2xl font-black text-neutral-900 dark:text-white tracking-widest font-['Space_Grotesk'] uppercase">JAYA PERKASA</h1>
+</div>
+<nav class="hidden md:flex gap-8 items-center">
+<a class="text-[#FDB813] border-b-4 border-[#FDB813] font-['Space_Grotesk'] font-bold uppercase tracking-tighter py-2" href="#">ARMADA</a>
+<a class="text-neutral-600 dark:text-neutral-400 font-['Space_Grotesk'] font-bold uppercase tracking-tighter py-2 hover:bg-[#FDB813] hover:text-black transition-colors duration-150 px-2" href="#">SEWA</a>
+<a class="text-neutral-600 dark:text-neutral-400 font-['Space_Grotesk'] font-bold uppercase tracking-tighter py-2 hover:bg-[#FDB813] hover:text-black transition-colors duration-150 px-2" href="#">DUKUNGAN</a>
+<span class="material-symbols-outlined text-neutral-600 dark:text-neutral-400 cursor-pointer" data-icon="account_circle">account_circle</span>
+</nav>
+</div>
+</header>
+<main class="max-w-[1280px] mx-auto px-6 py-10 mb-20">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 mb-8 text-label-bold font-label-bold uppercase text-secondary">
+<a class="hover:text-primary" href="beranda.html">BERANDA</a>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<a class="hover:text-primary" href="#">ARMADA</a>
+<span class="material-symbols-outlined text-sm" data-icon="chevron_right">chevron_right</span>
+<span class="text-on-background">Bulldozer CAT D6R</span>
+</nav>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start">
+<!-- Left: Imagery -->
+<div class="lg:col-span-7 space-y-6">
+<div class="relative aspect-video border-4 border-neutral-900 bg-surface-container overflow-hidden hard-shadow">
+<img alt="Bulldozer CAT D6R" class="w-full h-full object-cover" data-alt="Powerful yellow Caterpillar D6R bulldozer on a construction site, pushing dirt with its large blade, heavy-duty tracks visible, bright daylight" src="https://s7d2.scene7.com/is/image/Caterpillar/CM20190529-16127-9d962">
+<div class="absolute top-4 left-4 bg-[#FDB813] text-black font-bold px-4 py-1 border-2 border-neutral-900 uppercase text-sm">
+                        Tersedia
+                    </div>
+</div>
+</div>
+<!-- Right: Details & Pricing -->
+<div class="lg:col-span-5 space-y-8">
+<div class="">
+<h2 class="font-headline-xl text-headline-xl uppercase tracking-tighter mb-2">Bulldozer CAT D6R</h2>
+<p class="text-secondary font-body-lg text-body-lg leading-snug">
+                        Dirancang untuk pekerjaan pemindahan tanah, pembersihan lahan, dan perataan lahan yang berat. CAT D6R menawarkan daya tahan legendaris dan kontrol perataan lahan yang unggul.
+                    </p>
+</div>
+<!-- Spec Grid -->
+<div class="grid grid-cols-2 gap-px bg-neutral-900 border-2 border-neutral-900">
+<div class="bg-white p-4">
+<span class="text-label-sm font-label-sm uppercase text-secondary block mb-1">Tenaga Mesin</span>
+<span class="font-headline-md text-headline-md">130 kW</span>
+</div>
+<div class="bg-white p-4">
+<span class="text-label-sm font-label-sm uppercase text-secondary block mb-1">Berat Opeasional</span>
+<span class="font-headline-md text-headline-md">18,500 kg</span>
+</div>
+<div class="bg-white p-4">
+<span class="text-label-sm font-label-sm uppercase text-secondary block mb-1">Kapasitas Maksimal</span>
+<span class="font-headline-md text-headline-md">3.8 m³</span>
+</div>
+<div class="bg-white p-4">
+<span class="text-label-sm font-label-sm uppercase text-secondary block mb-1">Lebar Jalur</span>
+<span class="font-headline-md text-headline-md">560 mm</span>
+</div>
+</div>
+<!-- Pricing Card -->
+<div class="border-4 border-neutral-900 p-6 bg-surface-container-low hard-shadow">
+<h3 class="text-label-bold font-label-bold uppercase border-b-2 border-primary-container pb-2 mb-4 inline-block">Rental Pricing</h3>
+<div class="space-y-3">
+<div class="flex justify-between items-center py-2 border-b border-neutral-200">
+<span class="font-body-md text-secondary">HARGA HARIAN</span>
+<span class="font-headline-md text-headline-md text-primary">Rp 4.000.000</span>
+</div>
+<div class="flex justify-between items-center py-2 border-b border-neutral-200">
+<span class="font-body-md text-secondary">HARGA MINGGUAN</span>
+<span class="font-headline-md text-headline-md text-primary">Rp 24.000.000</span>
+</div>
+<div class="flex justify-between items-center py-2">
+<span class="font-body-md text-secondary">HARGA BULANAN</span>
+<span class="font-headline-md text-headline-md text-primary">Rp 85.000.000</span>
+</div>
+</div>
+</div>
+<!-- WhatsApp CTA -->
+<a class="w-full bg-[#FDB813] text-neutral-900 font-headline-md text-headline-md py-5 flex items-center justify-center gap-3 border-4 border-neutral-900 hard-shadow-hover transition-all active:translate-y-1 active:shadow-none uppercase" href="https://api.whatsapp.com/send?phone=6285702610783&text=%F0%9F%9A%9C%20*Halo%2C%20selamat%20datang%20di%20JAYA%20PERKASA%20RENTAL!*%20%F0%9F%9A%9C%0A%0AKami%20menyediakan%20*jasa%20sewa%20alat%20berat%20terpercaya*%20dengan%20pilihan%20sewa%20*harian%2C%20mingguan%2C%20hingga%20bulanan*%20sesuai%20kebutuhan%20proyek%20Anda.%0A%0A%F0%9F%93%8C%20*Unit%20Tersedia%20%26%20Harga%20Sewa%3A*%0A%0A%F0%9F%94%B9%20*Excavator%20Komatsu%20PC200*%0A%E2%80%A2%20Harian%3A%20Rp3.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp21.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp75.000.000%0A%0A%F0%9F%94%B9%20*Bulldozer%20Caterpillar%20D6R*%0A%E2%80%A2%20Harian%3A%20Rp4.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp24.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp85.000.000%0A%0A%F0%9F%94%B9%20*Crane%20Kato%20NK-500E*%0A%E2%80%A2%20Harian%3A%20Rp7.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp42.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp150.000.000%0A%0A%F0%9F%94%B9%20*Dump%20Truck%20Hino*%0A%E2%80%A2%20Harian%3A%20Rp2.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp15.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp55.000.000%0A%0A%E2%9C%85%20Unit%20terawat%20%26%20siap%20kerja%0A%E2%9C%85%20Operator%20profesional%0A%E2%9C%85%20Harga%20nego%20untuk%20proyek%20besar%0A%E2%9C%85%20Melayani%20area%20konstruksi%2C%20tambang%2C%20dan%20infrastruktur%0A%0A%F0%9F%93%9E%20*Hubungi%20JAYA%20PERKASA%20RENTAL%20sekarang%20juga!*%0ADapatkan%20penawaran%20terbaik%20untuk%20kebutuhan%20alat%20berat%20proyek%20Anda.%0A%0A*JAYA%20PERKASA%20RENTAL%20%E2%80%93%20Sewa%20Mudah%2C%20Harga%20Bersahabat%2C%20Proyek%20Lancar!*" target="_blank">
+<span class="material-symbols-outlined" data-icon="whatsapp" data-weight="fill">chat</span>
+                    Sewa Sekarang via WhatsApp
+                </a>
+<p class="text-label-sm text-secondary text-center uppercase tracking-widest font-bold">
+                    *Harga belum termasuk biaya operator dan bahan bakar.
+                </p>
+</div>
+</div>
+<!-- Detailed Description Section -->
+<div class="mt-16 grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="md:col-span-2 space-y-6">
+<h3 class="font-headline-lg text-headline-lg uppercase border-l-8 border-[#FDB813] pl-6">TINJAUAN TEKNIS</h3>
+<div class="font-body-lg text-body-lg space-y-4 text-secondary">
+<p class="">
+                        CAT D6R adalah mesin serbaguna yang memberikan daya dan presisi untuk pekerjaan Anda yang paling menuntut. Rangka bawahnya yang kokoh dan mesin dengan torsi tinggi menjadikannya ideal untuk pekerjaan perataan tanah, pembersihan lahan, dan pengembangan lokasi.
+                    </p>
+<p class="font-bold text-on-background">
+                        Kasus Penggunaan Terbaik:
+                    </p>
+<ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            Penggalian Tanah Skala Besar
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            Pembersihan &amp; Perataan Lahan
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            Konstruksi Jalan
+                        </li>
+<li class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="check_circle">check_circle</span>
+                            Persiapan Lokasi
+                        </li>
+</ul>
+</div>
+</div>
+<!-- Reliability Card -->
+<div class="bg-neutral-900 text-white p-8 space-y-4 border-t-8 border-[#FDB813]">
+<span class="material-symbols-outlined text-[#FDB813] text-4xl" data-icon="verified">verified</span>
+<h4 class="font-headline-md text-headline-md uppercase">KEANDALAN YANG TANGGUH</h4>
+<p class="text-neutral-400 font-body-md">
+                    Armada kami dirawat dengan cermat oleh teknisi bersertifikasi. Setiap CAT D6R menjalani inspeksi keselamatan dan kinerja 50 poin sebelum setiap penugasan.
+                </p>
+<div class="pt-4 border-t border-neutral-700">
+<p class="text-xs font-bold text-[#FDB813] uppercase tracking-widest">Jam Dukungan</p>
+<p class="text-sm">Layanan Pemeliharaan Lapangan 24/7 Tersedia</p>
+</div>
+</div>
+</div>
+<!-- Spec Sheets Section -->
+<section class="mt-20">
+<h3 class="font-headline-lg text-headline-lg uppercase mb-8">RINCIAN SPESIFIKASI</h3>
+<div class="overflow-x-auto">
+<table class="w-full border-collapse">
+<thead class="bg-neutral-900 text-white uppercase text-label-bold font-label-bold">
+<tr>
+<th class="py-4 px-6 text-left border-b border-neutral-700">Category</th>
+<th class="py-4 px-6 text-left border-b border-neutral-700">Parameter</th>
+<th class="py-4 px-6 text-left border-b border-neutral-700">Value</th>
+</tr>
+</thead>
+<tbody class="font-body-md divide-y divide-neutral-200">
+<tr class="bg-white">
+<td class="py-4 px-6 font-bold uppercase text-xs">MESIN</td>
+<td class="py-4 px-6">DAYA BERSIH - ISO 9249</td>
+<td class="py-4 px-6 font-mono">130 kW (175 hp)</td>
+</tr>
+<tr class="bg-neutral-50">
+<td class="py-4 px-6 font-bold uppercase text-xs">MESIN</td>
+<td class="py-4 px-6">MODEL MESIN</td>
+<td class="py-4 px-6 font-mono">Cat C9 ACERT</td>
+</tr>
+<tr class="bg-white">
+<td class="py-4 px-6 font-bold uppercase text-xs">BERAT<br></td>
+<td class="py-4 px-6">BERAT OPRASIONAL</td>
+<td class="py-4 px-6 font-mono">18,660 kg</td>
+</tr>
+<tr class="bg-neutral-50">
+<td class="py-4 px-6 font-bold uppercase text-xs">BILAH</td>
+<td class="py-4 px-6">KAPASITAS PISAU (SU)</td>
+<td class="py-4 px-6 font-mono">4.28 m³</td>
+</tr>
+<tr class="bg-white">
+<td class="py-4 px-6 font-bold uppercase text-xs">DIMENSI</td>
+<td class="py-4 px-6">Panjang Keseluruhan (dengan mata pisau)</td>
+<td class="py-4 px-6 font-mono">5,440 mm</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-neutral-900 dark:bg-neutral-950 border-t-8 border-[#FDB813] w-full relative bottom-0">
+<div class="flex flex-col md:flex-row justify-between items-center px-12 py-10 w-full gap-6">
+<div class="flex flex-col gap-2">
+<span class="text-xl font-black text-white font-['Space_Grotesk'] uppercase">JAYA PERKASA RENTAL</span>
+<p class="text-neutral-400 font-['Space_Grotesk'] text-sm font-medium tracking-tight">© 2024 JAYA PERKASA RENTAL. ALL RIGHTS RESERVED.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-8">
+<a class="text-neutral-400 hover:text-[#FDB813] transition-all font-['Space_Grotesk'] text-sm font-medium tracking-tight uppercase" href="#">Fleet</a>
+<a class="text-neutral-400 hover:text-[#FDB813] transition-all font-['Space_Grotesk'] text-sm font-medium tracking-tight uppercase" href="#">Terms of Service</a>
+<a class="text-neutral-400 hover:text-[#FDB813] transition-all font-['Space_Grotesk'] text-sm font-medium tracking-tight uppercase" href="#">Safety Protocols</a>
+<a class="text-neutral-400 hover:text-[#FDB813] transition-all font-['Space_Grotesk'] text-sm font-medium tracking-tight uppercase" href="#">Contact Us</a>
+</div>
+</div>
+</footer>
+</body></html>

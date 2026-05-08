@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+
+<html lang="id"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700;900&amp;family=Inter:wght@300;400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#c5c4c4",
+                    "surface-dim": "#dadada",
+                    "outline-variant": "#d5c4ac",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-surface": "#1a1c1c",
+                    "tertiary-fixed": "#e4e2e2",
+                    "primary-fixed": "#ffdea7",
+                    "error": "#ba1a1a",
+                    "primary": "#7c5800",
+                    "surface-bright": "#f9f9f9",
+                    "surface": "#f9f9f9",
+                    "inverse-primary": "#ffbb1e",
+                    "on-surface-variant": "#504533",
+                    "surface-container-highest": "#e2e2e2",
+                    "surface-variant": "#e2e2e2",
+                    "on-secondary-container": "#656464",
+                    "inverse-surface": "#2f3131",
+                    "primary-container": "#fdb813",
+                    "on-primary-fixed": "#271900",
+                    "on-secondary": "#ffffff",
+                    "on-primary-container": "#6b4b00",
+                    "on-tertiary-container": "#515151",
+                    "on-error": "#ffffff",
+                    "secondary-container": "#e4e2e1",
+                    "secondary-fixed": "#e4e2e1",
+                    "background": "#f9f9f9",
+                    "primary-fixed-dim": "#ffbb1e",
+                    "surface-tint": "#7c5800",
+                    "on-error-container": "#93000a",
+                    "secondary-fixed-dim": "#c8c6c5",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "outline": "#837560",
+                    "on-secondary-fixed": "#1b1c1c",
+                    "tertiary": "#5e5e5e",
+                    "surface-container-high": "#e8e8e8",
+                    "on-tertiary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-background": "#1a1c1c",
+                    "inverse-on-surface": "#f1f1f1",
+                    "surface-container": "#eeeeee",
+                    "secondary": "#5f5e5e",
+                    "surface-container-low": "#f3f3f3",
+                    "on-primary-fixed-variant": "#5e4200",
+                    "on-secondary-fixed-variant": "#474746",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "on-primary": "#ffffff",
+                    "surface-container-lowest": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-sm": "8px",
+                    "section-padding": "80px",
+                    "stack-lg": "32px",
+                    "margin": "32px",
+                    "gutter": "24px",
+                    "base": "8px",
+                    "container-max": "1280px",
+                    "stack-md": "16px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-xl": ["Space Grotesk"],
+                    "label-sm": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg": ["Space Grotesk"],
+                    "headline-md": ["Space Grotesk"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-xl": ["48px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "label-sm": ["12px", {"lineHeight": "1", "fontWeight": "500"}],
+                    "label-bold": ["14px", {"lineHeight": "1", "fontWeight": "700"}],
+                    "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                    "headline-lg": ["32px", {"lineHeight": "1.2", "fontWeight": "700"}],
+                    "headline-md": ["24px", {"lineHeight": "1.3", "fontWeight": "600"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .hard-shadow { box-shadow: 4px 4px 0px 0px rgba(24,24,27,1); }
+        .active-hard-shadow:active { transform: translate(2px, 2px); box-shadow: 0px 0px 0px 0px rgba(24,24,27,1); }
+        .grid-pattern {
+            background-image: radial-gradient(circle, #d5c4ac 1px, transparent 1px);
+            background-size: 24px 24px;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-4 md:px-8 h-20 bg-white dark:bg-zinc-950 border-b-4 border-zinc-900 shadow-[4px_4px_0px_0px_rgba(24,24,27,1)]">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="construction" style="">construction</span>
+<h1 class="text-xl md:text-2xl font-black text-zinc-900 dark:text-zinc-50 tracking-widest font-headline-xl uppercase" style="">JAYA PERKASA RENTAL</h1>
+</div>
+<div class="hidden sm:flex items-center gap-4">
+<div class="flex items-center gap-2 px-3 py-2 bg-primary-fixed text-zinc-900 border-2 border-zinc-900 rounded-lg">
+<span class="material-symbols-outlined text-base" data-icon="visibility" style="">visibility</span>
+<span class="font-label-bold text-xs uppercase tracking-widest">
+Pengunjung: <span id="navbar-visitor-count" class="font-bold text-primary">0</span>
+</span>
+</div>
+<a class="hidden md:flex items-center gap-2 px-4 py-2 bg-primary-container text-on-primary-container font-headline-md text-sm font-bold uppercase tracking-tighter border-2 border-zinc-900 hard-shadow active-hard-shadow transition-all" href="https://api.whatsapp.com/send?phone=6285702610783&text=%F0%9F%9A%9C%20*Halo%2C%20selamat%20datang%20di%20JAYA%20PERKASA%20RENTAL!*%20%F0%9F%9A%9C%0A%0AKami%20menyediakan%20*jasa%20sewa%20alat%20berat%20terpercaya*%20dengan%20pilihan%20sewa%20*harian%2C%20mingguan%2C%20hingga%20bulanan*%20sesuai%20kebutuhan%20proyek%20Anda.%0A%0A%F0%9F%93%8C%20*Unit%20Tersedia%20%26%20Harga%20Sewa%3A*%0A%0A%F0%9F%94%B9%20*Excavator%20Komatsu%20PC200*%0A%E2%80%A2%20Harian%3A%20Rp3.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp21.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp75.000.000%0A%0A%F0%9F%94%B9%20*Bulldozer%20Caterpillar%20D6R*%0A%E2%80%A2%20Harian%3A%20Rp4.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp24.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp85.000.000%0A%0A%F0%9F%94%B9%20*Crane%20Kato%20NK-500E*%0A%E2%80%A2%20Harian%3A%20Rp7.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp42.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp150.000.000%0A%0A%F0%9F%94%B9%20*Dump%20Truck%20Hino*%0A%E2%80%A2%20Harian%3A%20Rp2.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp15.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp55.000.000%0A%0A%E2%9C%85%20Unit%20terawat%20%26%20siap%20kerja%0A%E2%9C%85%20Operator%20profesional%0A%E2%9C%85%20Harga%20nego%20untuk%20proyek%20besar%0A%E2%9C%85%20Melayani%20area%20konstruksi%2C%20tambang%2C%20dan%20infrastruktur%0A%0A%F0%9F%93%9E%20*Hubungi%20JAYA%20PERKASA%20RENTAL%20sekarang%20juga!*%0ADapatkan%20penawaran%20terbaik%20untuk%20kebutuhan%20alat%20berat%20proyek%20Anda.%0A%0A*JAYA%20PERKASA%20RENTAL%20%E2%80%93%20Sewa%20Mudah%2C%20Harga%20Bersahabat%2C%20Proyek%20Lancar!*" style="">
+<span class="material-symbols-outlined text-sm" data-icon="chat" style="">chat</span>
+            KONTAK WHATSAPP
+        </a>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="relative min-h-[707px] flex flex-col justify-center items-start px-6 md:px-12 bg-zinc-900 overflow-hidden">
+<div class="absolute inset-0 opacity-40">
+<img class="w-full h-full object-cover" data-alt="cinematic wide shot of a massive yellow hydraulic excavator on a rugged construction site at dusk with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAlAcMlCOvO5U_Dw7czwStj-iekVEHnPSF23AgizpmTszjpdWHDB52tbGOSpvXL6w1qJR1ZN7OUdoqhumcWiPK4QCVwuKGoiDcy7s8bZctkAY_IbRkyIbuWOUIItGI-ODmu3k8NhF7VJCeb31AqwfHWg-YfOKy8Hha0MHg4gBh94dB_dE9TggfWiEDRGBYQx1AAxUyiCP2EcvUFwwpajnna8aaxBhBEjyDldTQTPqpvotAP6OVCjRCelYy_NIJ2zVvjG70z65PHiai4" style=""/>
+</div>
+<div class="relative z-10 max-w-2xl">
+<div class="bg-primary-container text-on-primary-container inline-block px-4 py-1 mb-6 border-2 border-zinc-900 font-label-bold uppercase tracking-widest" style="">
+                    PERALATAN TUGAS BERAT
+                </div>
+<h2 class="text-white font-headline-xl text-5xl md:text-7xl mb-6 uppercase tracking-tighter" style="">
+                    Sewa Alat Berat <span class="text-primary-container" style="">Terpercaya</span>
+</h2>
+<p class="text-zinc-300 font-body-lg mb-8 max-w-lg" style="">
+                    Solusi penyewaan alat berat profesional untuk proyek konstruksi berskala besar. Armada prima, operator ahli, dan layanan servis 24/7.
+                </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="bg-primary-container text-zinc-900 px-8 py-4 font-headline-md text-lg font-black uppercase tracking-widest border-2 border-zinc-900 hard-shadow active-hard-shadow transition-all text-center inline-block" href="#katalog">Lihat Katalog</a>
+<a class="bg-transparent text-white border-2 border-white px-8 py-4 font-headline-md text-lg font-black uppercase tracking-widest hover:bg-white hover:text-zinc-900 transition-all text-center inline-block" href="https://api.whatsapp.com/send?phone=6285702610783&text=%F0%9F%9A%9C%20*Halo%2C%20selamat%20datang%20di%20JAYA%20PERKASA%20RENTAL!*%20%F0%9F%9A%9C%0A%0AKami%20menyediakan%20*jasa%20sewa%20alat%20berat%20terpercaya*%20dengan%20pilihan%20sewa%20*harian%2C%20mingguan%2C%20hingga%20bulanan*%20sesuai%20kebutuhan%20proyek%20Anda.%0A%0A%F0%9F%93%8C%20*Unit%20Tersedia%20%26%20Harga%20Sewa%3A*%0A%0A%F0%9F%94%B9%20*Excavator%20Komatsu%20PC200*%0A%E2%80%A2%20Harian%3A%20Rp3.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp21.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp75.000.000%0A%0A%F0%9F%94%B9%20*Bulldozer%20Caterpillar%20D6R*%0A%E2%80%A2%20Harian%3A%20Rp4.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp24.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp85.000.000%0A%0A%F0%9F%94%B9%20*Crane%20Kato%20NK-500E*%0A%E2%80%A2%20Harian%3A%20Rp7.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp42.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp150.000.000%0A%0A%F0%9F%94%B9%20*Dump%20Truck%20Hino*%0A%E2%80%A2%20Harian%3A%20Rp2.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp15.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp55.000.000%0A%0A%E2%9C%85%20Unit%20terawat%20%26%20siap%20kerja%0A%E2%9C%85%20Operator%20profesional%0A%E2%9C%85%20Harga%20nego%20untuk%20proyek%20besar%0A%E2%9C%85%20Melayani%20area%20konstruksi%2C%20tambang%2C%20dan%20infrastruktur%0A%0A%F0%9F%93%9E%20*Hubungi%20JAYA%20PERKASA%20RENTAL%20sekarang%20juga!*%0ADapatkan%20penawaran%20terbaik%20untuk%20kebutuhan%20alat%20berat%20proyek%20Anda.%0A%0A*JAYA%20PERKASA%20RENTAL%20%E2%80%93%20Sewa%20Mudah%2C%20Harga%20Bersahabat%2C%20Proyek%20Lancar!*">Hubungi Kami</a>
+</div>
+</div>
+<!-- Status Badges -->
+<div class="absolute bottom-10 right-6 md:right-12 hidden lg:flex flex-col gap-4">
+<div class="bg-zinc-800/80 backdrop-blur p-4 border-l-4 border-primary-container flex items-center gap-4 min-w-[240px]">
+<span class="material-symbols-outlined text-primary-container" data-icon="verified" style="">verified</span>
+<div>
+<div class="text-white font-label-bold text-xs uppercase" style="">Armada Tersedia</div>
+<div class="text-primary-container font-headline-md text-xl" style="">150+ UNITS</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Menu Section (Grid) -->
+<section class="py-20 px-6 md:px-12 bg-surface" id="katalog">
+<div class="max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<h3 class="font-headline-xl text-zinc-900 text-4xl uppercase mb-2" style="">Katalog Armada</h3>
+<div class="h-2 w-24 bg-primary-container"></div>
+</div>
+<p class="text-zinc-500 font-body-md max-w-md" style="">Pilihan lengkap alat berat dengan performa tinggi yang siap mendukung kelancaran proyek Anda.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Category Card 1 -->
+<div class="group bg-white border-2 border-zinc-900 hard-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+<div class="h-48 overflow-hidden border-b-2 border-zinc-900">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="modern yellow excavator bucket close up on a worksite with clear details of metal and soil" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaycnZ4yuT8xnGvCvI9SCB5T_IES0aI-qF9zpexgxofxmIN_B7A4vOyr-fSH9rtktZfvuFDv-cyJUwzJxM85RbXlnhMVxHbXl_KPaPpxycP0DYaHSJRyjbLCKpE23feDvfsN95u0Pi57vmDJ8OlfDEW_dGHxd-iKcjG3Gr2j8CHouJV-dLsvDiQTU92o7IFgoe7ymfq_bGuHb8t-VfWsK9dTRDpKoeKAndDFlQqQqIYTfCbYxqC44APqDtPEo3AwCQinPoAaHYoWNV" style=""/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline-md text-zinc-900 text-xl uppercase font-black" style="">Excavators</h4>
+<span class="material-symbols-outlined text-primary-container" data-icon="precision_manufacturing" style="">precision_manufacturing</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+</div>
+<button class="w-full py-2 bg-zinc-900 text-white font-label-bold uppercase tracking-widest hover:bg-primary-container hover:text-zinc-900 transition-colors" onclick="location.href='detail1.html'" style="">Lihat Detail</button>
+</div>
+</div>
+<!-- Category Card 2 -->
+<div class="group bg-white border-2 border-zinc-900 hard-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+<div class="h-48 overflow-hidden border-b-2 border-zinc-900">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="massive yellow bulldozer clearing earth on a construction project with heavy metal tracks visible" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA300X3a0N_1RIbFGZZREa_P81rYL6pVa17nlsroa2ADVaLmbfTDhTKSBu7bSrO11qRHaZv0Vt607rz3RgXrp3u7VHp3QdiC8n7bquU-VjtgK0UX7PDnDuwEL74RohJboki7jbP2uTcjFwVt1s9POjv7230Lbxltsd9nblqrQfLKHvqdAHjBDNznzQY0fUT4fv1b5r8coOZLuqpKXKPEQCYIuY9GDJ2N_cVsgZHY2YYvvx9B1AbH2_HdDUqRniaucTfZLHEQFYNFnvz" style=""/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline-md text-zinc-900 text-xl uppercase font-black" style="">Bulldozers</h4>
+<span class="material-symbols-outlined text-primary-container" data-icon="agriculture" style="">agriculture</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+</div>
+<button class="w-full py-2 bg-zinc-900 text-white font-label-bold uppercase tracking-widest hover:bg-primary-container hover:text-zinc-900 transition-colors" onclick="location.href='detail2.html'" style="">Lihat Detail</button>
+</div>
+</div>
+<!-- Category Card 3 -->
+<div class="group bg-white border-2 border-zinc-900 hard-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+<div class="h-48 overflow-hidden border-b-2 border-zinc-900">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="industrial tower crane against a blue sky over a skyscraper construction site" src="https://i0.wp.com/exxa.co/wp-content/uploads/2020/02/Kato-NK-500B-V-Hydraulic-Truck-Crane-50-ton-S-N-2010144-1.jpg?fit=2048,1536&ssl=1" style=""/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline-md text-zinc-900 text-xl uppercase font-black" style="">Cranes</h4>
+<span class="material-symbols-outlined text-primary-container" data-icon="height" style="">height</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+</div>
+<button class="w-full py-2 bg-zinc-900 text-white font-label-bold uppercase tracking-widest hover:bg-primary-container hover:text-zinc-900 transition-colors" onclick="location.href='crane.html'" style="">Lihat Detail</button>
+</div>
+</div>
+<!-- Category Card 4 -->
+<div class="group bg-white border-2 border-zinc-900 hard-shadow hover:translate-x-[-2px] hover:translate-y-[-2px] transition-all">
+<div class="h-48 overflow-hidden border-b-2 border-zinc-900">
+<img class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="heavy duty off-road dump truck loaded with earth on a mining site" src="https://imgx.gridoto.com/crop/0x0:0x0/600x350/photo/2020/08/16/1070691410.jpeg" style=""/>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-4">
+<h4 class="font-headline-md text-zinc-900 text-xl uppercase font-black" style="">Trucks</h4>
+<span class="material-symbols-outlined text-primary-container" data-icon="local_shipping" style="">local_shipping</span>
+</div>
+<div class="flex flex-wrap gap-2 mb-6">
+</div>
+<button class="w-full py-2 bg-zinc-900 text-white font-label-bold uppercase tracking-widest hover:bg-primary-container hover:text-zinc-900 transition-colors" onclick="location.href='truck.html'" style="">Lihat Detail</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- WhatsApp & Call to Action -->
+<section class="bg-zinc-900 text-white py-20 px-6 relative overflow-hidden">
+<div class="grid-pattern absolute inset-0 opacity-10"></div>
+<div class="max-w-4xl mx-auto relative z-10 text-center">
+<span class="material-symbols-outlined text-primary-container text-6xl mb-6" data-icon="support_agent" style="">support_agent</span>
+<h3 class="font-headline-xl text-4xl md:text-5xl mb-6 uppercase tracking-tighter" style="">Butuh Penawaran Khusus?</h3>
+<p class="text-zinc-400 font-body-lg mb-10 max-w-2xl mx-auto" style="">
+                    Konsultasikan kebutuhan proyek Anda dengan tim ahli kami secara gratis. Kami siap memberikan penawaran harga terbaik untuk rental jangka pendek maupun panjang.
+                </p>
+<div class="flex justify-center">
+<a class="flex items-center gap-4 bg-primary-container text-zinc-900 px-8 md:px-12 py-5 font-headline-md text-xl font-black uppercase tracking-widest border-4 border-white hard-shadow active-hard-shadow transition-all group" href="https://api.whatsapp.com/send?phone=6285702610783&text=%F0%9F%9A%9C%20*Halo%2C%20selamat%20datang%20di%20JAYA%20PERKASA%20RENTAL!*%20%F0%9F%9A%9C%0A%0AKami%20menyediakan%20*jasa%20sewa%20alat%20berat%20terpercaya*%20dengan%20pilihan%20sewa%20*harian%2C%20mingguan%2C%20hingga%20bulanan*%20sesuai%20kebutuhan%20proyek%20Anda.%0A%0A%F0%9F%93%8C%20*Unit%20Tersedia%20%26%20Harga%20Sewa%3A*%0A%0A%F0%9F%94%B9%20*Excavator%20Komatsu%20PC200*%0A%E2%80%A2%20Harian%3A%20Rp3.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp21.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp75.000.000%0A%0A%F0%9F%94%B9%20*Bulldozer%20Caterpillar%20D6R*%0A%E2%80%A2%20Harian%3A%20Rp4.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp24.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp85.000.000%0A%0A%F0%9F%94%B9%20*Crane%20Kato%20NK-500E*%0A%E2%80%A2%20Harian%3A%20Rp7.000.000%0A%E2%80%A2%20Mingguan%3A%20Rp42.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp150.000.000%0A%0A%F0%9F%94%B9%20*Dump%20Truck%20Hino*%0A%E2%80%A2%20Harian%3A%20Rp2.500.000%0A%E2%80%A2%20Mingguan%3A%20Rp15.000.000%0A%E2%80%A2%20Bulanan%3A%20Rp55.000.000%0A%0A%E2%9C%85%20Unit%20terawat%20%26%20siap%20kerja%0A%E2%9C%85%20Operator%20profesional%0A%E2%9C%85%20Harga%20nego%20untuk%20proyek%20besar%0A%E2%9C%85%20Melayani%20area%20konstruksi%2C%20tambang%2C%20dan%20infrastruktur%0A%0A%F0%9F%93%9E%20*Hubungi%20JAYA%20PERKASA%20RENTAL%20sekarang%20juga!*%0ADapatkan%20penawaran%20terbaik%20untuk%20kebutuhan%20alat%20berat%20proyek%20Anda.%0A%0A*JAYA%20PERKASA%20RENTAL%20%E2%80%93%20Sewa%20Mudah%2C%20Harga%20Bersahabat%2C%20Proyek%20Lancar!*" style="">
+<span class="material-symbols-outlined group-hover:scale-125 transition-transform" data-icon="chat" style='font-variation-settings: "FILL" 1;'>chat</span>
+                        Hubungi Kami via WhatsApp
+                    </a>
+</div>
+</div>
+</section>
+<!-- Map Section -->
+<section class="py-20 px-6 md:px-12 bg-white" id="lokasi">
+<div class="max-w-container-max mx-auto flex flex-col lg:flex-row gap-12">
+<div class="lg:w-1/3">
+<h3 class="font-headline-xl text-zinc-900 text-4xl uppercase mb-6 leading-none" style="">Lokasi Kantor Kami</h3>
+<div class="space-y-6">
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="location_on" style="">location_on</span>
+<div>
+<p class="font-label-bold text-zinc-900 uppercase" style="">Alamat Utama</p>
+<p class="text-zinc-600 font-body-md mt-1" style="">Krajan, Tanggul Kulon, Kec. Tanggul, Kabupaten Jember, Jawa Timur 68155</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="phone_in_talk" style="">phone_in_talk</span>
+<div>
+<p class="font-label-bold text-zinc-900 uppercase" style="">Telepon</p>
+<p class="text-zinc-600 font-body-md mt-1" style="">+62 857-0261-0783</p>
+</div>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-primary-container" data-icon="mail" style="">mail</span>
+<div>
+<p class="font-label-bold text-zinc-900 uppercase" style="">Email</p>
+<p class="text-zinc-600 font-body-md mt-1" style="">info@jayaperkasa.com</p>
+</div>
+</div>
+<a class="w-full mt-4 flex items-center justify-center gap-2 py-4 border-2 border-zinc-900 font-label-bold uppercase tracking-widest hover:bg-zinc-900 hover:text-white transition-all text-center" href="https://www.google.com/maps/place/8%C2%B010'16.5%22S+113%C2%B026'32.1%22E/@-8.1712523,113.4396859,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-8.1712523!4d113.4422608?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw%3D%3D" target="_blank"><span class="material-symbols-outlined" data-icon="map">map</span>Buka di Google Maps</a>
+</div>
+</div>
+<div class="lg:w-2/3 h-[400px] bg-zinc-100 border-4 border-zinc-900 hard-shadow overflow-hidden relative">
+<!-- Virtual Map Visual -->
+<div class="absolute inset-0 bg-zinc-200">
+<img class="w-full h-full object-cover opacity-60" data-alt="abstract stylized aerial map showing industrial zones and road networks in monochrome with yellow highlights" src="https://i.ibb.co.com/NdDNXmBV/Cuplikan-layar-2026-04-28-131843.png" style=""/>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+<div class="relative">
+<span class="material-symbols-outlined text-6xl text-primary drop-shadow-[2px_2px_0px_white]" data-icon="location_on" style='font-variation-settings: "FILL" 1;'>location_on</span>
+<div class="absolute top-0 right-0 -mr-24 bg-zinc-900 text-white px-3 py-1 text-[10px] font-black uppercase tracking-widest border border-primary-container" style="">lokasi</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-zinc-900 dark:bg-black border-t-8 border-primary-container">
+<div class="w-full py-12 px-8 flex flex-col md:flex-row justify-between items-center gap-8 max-w-container-max mx-auto">
+<div class="flex flex-col items-center md:items-start gap-4">
+<div class="text-lg font-black text-white uppercase tracking-widest font-headline-xl" style="">JAYA PERKASA RENTAL</div>
+<p class="text-zinc-500 font-label-sm uppercase tracking-widest text-center md:text-left" style="">© 2024 JAYA PERKASA RENTAL. DIRANCANG UNTUK PEKERJAAN TERBERAT.</p>
+<div class="text-zinc-400 font-label-sm uppercase tracking-widest text-center md:text-left mt-2">
+<span>Pengunjung: <span id="visitor-count" class="text-primary-container font-bold">0</span></span>
+</div>
+</div>
+<nav class="flex flex-wrap justify-center gap-8">
+<a class="font-['Space_Grotesk'] uppercase text-xs font-bold tracking-widest text-zinc-400 hover:text-white transition-colors" href="beranda.html" style="">Home</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs font-bold tracking-widest text-zinc-400 hover:text-white transition-colors" href="#katalog" style="">Equipment Menu</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs font-bold tracking-widest text-zinc-400 hover:text-white transition-colors" href="https://wa.me/6285702610783" style="">WhatsApp Contact</a>
+<a class="font-['Space_Grotesk'] uppercase text-xs font-bold tracking-widest text-zinc-400 hover:text-white transition-colors" href="https://www.google.com/maps/place/8%C2%B010'16.5%22S+113%C2%B026'32.1%22E/@-8.1712523,113.4396859,17z/data=!3m1!4b1!4m4!3m3!8m2!3d-8.1712523!4d113.4422608?hl=en&entry=ttu&g_ep=EgoyMDI2MDQyMi4wIKXMDSoASAFQAw==" style="">Our Location</a>
+</nav>
+</div>
+</footer>
+<!-- FAB for Quick Contact (Mobile only) -->
+<a class="md:hidden fixed bottom-6 right-6 w-16 h-16 bg-primary-container border-2 border-zinc-900 shadow-[4px_4px_0px_0px_rgba(24,24,27,1)] flex items-center justify-center z-50 active:translate-x-[2px] active:translate-y-[2px] active:shadow-none transition-all" href="https://wa.me/62215551234" style="">
+<span class="material-symbols-outlined text-zinc-900 text-3xl" data-icon="chat" style='font-variation-settings: "FILL" 1;'>chat</span>
+</a>
+<script>
+  // Visitor Counter
+  function initVisitorCounter() {
+    const visitorCountElement = document.getElementById('visitor-count');
+    const navbarVisitorCountElement = document.getElementById('navbar-visitor-count');
+    const visitorKey = 'jayaPerkasaVisitors';
+    
+    // Get current count from localStorage
+    let visitorCount = localStorage.getItem(visitorKey);
+    
+    if (visitorCount === null) {
+      // First time visitor
+      visitorCount = 1;
+    } else {
+      // Increment existing count
+      visitorCount = parseInt(visitorCount) + 1;
+    }
+    
+    // Save updated count
+    localStorage.setItem(visitorKey, visitorCount);
+    
+    // Format number with thousand separator
+    const formattedCount = new Intl.NumberFormat('id-ID').format(visitorCount);
+    
+    // Display count in footer
+    if (visitorCountElement) {
+      visitorCountElement.textContent = formattedCount;
+    }
+    
+    // Display count in navbar
+    if (navbarVisitorCountElement) {
+      navbarVisitorCountElement.textContent = formattedCount;
+    }
+  }
+  
+  // Initialize counter when page loads
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initVisitorCounter);
+  } else {
+    initVisitorCounter();
+  }
+</script>
+</body></html>
